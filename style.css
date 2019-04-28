@@ -1,0 +1,373 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background: #A3C1AD;
+    font-family: 'Merriweather', serif;
+    font-size: 15px;
+    color: midnightblue;
+    line-height: 1.2em;
+    margin: 5px;
+    padding: 3px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    background-color: white;
+    border: 5px midnightblue solid;
+    padding: 5px;
+}
+
+.logo {
+    color: midnightblue;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 25px;
+    font-weight: bold;
+    word-spacing: 0.2em;
+    padding-top: 1px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    width: 65%;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+}
+
+nav ul li:hover{
+    background: #A3C1AD;
+    font-weight: bold
+}
+
+nav ul li a {
+    color: midnightblue;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    font-size: 15px;
+}
+
+#mapid {
+    position: absolute;
+    width: 100%;
+    opacity: 0.9;
+    top: 82px;
+    bottom: 0;
+    left: 0;
+    border-top: 5px midnightblue solid;   
+}
+
+.container {
+    width: 98%;
+    margin: 20px;
+    box-sizing: border-box;
+}
+
+#content h1{
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 25px;
+    font-weight: bold;
+    word-spacing: 0.2em;
+}
+
+#content h2{
+    text-transform: uppercase;
+    font-size: 20px;
+    text-decoration: underline;
+    text-align: center;
+}
+
+#content {
+    background-color: white;
+    border: 5px midnightblue solid;
+}
+
+p {
+    color: midnightblue;
+    font-size: 16px;
+    line-height: 2.0em;
+}
+
+li {
+    line-height: 2.0em;
+    padding: 5px;
+    margin-left: 20px;
+}
+
+.float-img {
+    float: right;
+    margin: 15px;
+    border: 6px dotted lightblue;
+}
+
+.zoom-img {
+    float: right;
+    border: 6px dotted lightblue;
+    transition: transform .2s;
+    margin-bottom: 15px auto;
+}
+
+.zoom-img:hover {
+  -ms-transform: scale(1.2); /* IE 9 */
+  -webkit-transform: scale(1.2); /* Safari 3-8 */
+  transform: scale(2.0); 
+}
+
+/* About Me Picture Slideshow */
+.myslides {
+    max-width: 50%;
+    max-height: 50%;
+    border: 5px midnightblue solid;
+    position: static;
+    padding: 0;
+    margin: 0 auto;
+}
+
+/* Picture Captain  */
+.myslides .text {
+    color: midnightblue;
+    background-color: lightblue;
+    border-bottom: 5px midnightblue solid;
+    font-size: 15px;
+    font-weight: bold;
+    width: 100%;
+    padding: 5px;
+    text-align: center;
+}
+
+/* Picture Dots */
+.myslides-dotcontainer {
+    margin: 0 auto;
+    background-color: lightblue;
+    border-bottom: 5px midnightblue solid;
+    border-right: 5px midnightblue solid;
+    border-left: 5px midnightblue solid;
+    width: 50%;
+    padding: 8px;
+    text-align: center;
+}
+
+.dot {
+  background-color: #bbb;
+  transition: 10s ease;
+    text-align: left;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* About Me Slideshow Fading Animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 15s;
+  animation-name: fade;
+  animation-duration: 4.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* Testimonal B.G Quote */
+.quotation{
+    font-size:25px;
+    font-weight: bold;
+    quotes: "\201C""\201D""\2018""\2019";
+    text-align: center;
+    padding: 5px 10px;
+    line-height: 2.5;
+}
+
+.quotation:before {
+    content: open-quote;
+    display: inline;
+    height: 0;
+    line-height: 0;
+    left: -10px;
+    position: relative;
+    top: 30px;
+    color: #ccc;
+    font-size: 3em;
+}
+
+.quotation::after {
+    content: close-quote;
+    display: inline;
+    height: 0;
+    line-height: 0;
+    left: 10px;
+    position: relative;
+    top: 30px;
+    color: #ccc;
+    font-size: 3em;
+}
+
+footer{
+    text-align: center;
+    font-size: 1.5em;
+    font-style: italic;
+    font-weight: bold;
+}
+
+ /* Testimonal Container */
+.quote-container {
+    position: relative;
+    width: 95%;
+    background: #A3C1AD;
+    margin: 30px 0 0 30px;
+    padding: 10px 10px;
+}
+
+/* Testimonal Slides */
+.mySlides {
+  display: none;
+  padding: 40px;
+  text-align: center;
+}
+
+/* Testimonal Next & Previous Buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: 60px;
+  padding: 15px;
+  color: midnightblue;
+  font-weight: bold;
+  font-size: 30px;
+  border-radius: 3px 0 0 3px;
+  user-select: none;
+}
+
+/* Testimonal Next Button Position */
+.next {
+  position: absolute;
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* Testimonal Hover */
+.prev:hover, .next:hover {
+  background-color: lightgrey;
+  color: white;
+}
+
+/* Testimonal Dots Container */
+.test-dotcontainer {
+position: relative;
+width: 95%;
+text-align: center;
+background: lightblue;
+padding: 15px;
+margin: 0 30px;
+}
+
+/* Testimonal Dots */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: midnightblue;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.5s ease;
+}
+
+/* Testimonal Active Dot */
+.active, .dot:hover {
+  background-color: white;
+}
+
+/* Testimonal Content */
+q {
+    font-weight: bold;
+    color: midnightblue;
+    line-height: 2em;
+}
+/* Testimonal Person */
+.person {
+    font-weight: bold;
+    color: white;
+}
+/* Feedback Form */
+.contact-form {
+    width: 55%;
+    max-width: 800px;
+    background: #A3C1AD;
+    transform: translate(40%, -2%);
+    padding: 20px 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.contact-title {
+    background: midnightblue;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    width: 100%;
+    margin: 20px 0;
+    border-radius: 10px;
+    padding: 10px 0px;
+}
+
+.contact-item {
+    border: 4px dotted lightblue;
+    margin: 25px 0;
+    padding: 18px 18px;
+    background: white;
+    border-radius: 10px;
+}
+
+.contact-item label{
+    display: block;
+    text-align: left;
+    font-weight: bold;
+    color: midnightblue;
+    text-transform: uppercase;
+    font-size: 12pt;
+}
+
+.contact-item input, .contact-item textarea{
+    width: 100%;
+    border: none;
+    background: white;
+    outline: none;
+    font-size: 15px;
+    font-family: sans-serif;
+    margin-top: 6px;
+}
+.btn{
+    display: block;
+    background: midnightblue;
+    padding: 10px 0;
+    color:white;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 8px;
+    width: 100%;
+    border-radius: 10px;
+}
